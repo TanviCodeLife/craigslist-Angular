@@ -10,6 +10,7 @@ import { Listing } from './../models/listing.model';
 })
 export class AddListingComponent implements OnInit {
   listing: Listing;
+  id: number = 0;
 
   constructor(private listingService: ListingService) { }
 
@@ -17,9 +18,17 @@ export class AddListingComponent implements OnInit {
     // this.listings = this.listingService.
   }
 
+  assignListingId() {
+    let newId = this.id;
+    this.id++;
+    return newId;
+  }
+
   submitListingForm(title, content, userName, categoryId){
-    this.listing = new Listing(title, content, userName, categoryId);
-    this.listing.assignListingId();
+    let categoryIdNum: number = parseInt(categoryId)
+    let listingId: number = this.assignListingId();
+    console.log(listingId);
+    this.listing = new Listing(title, content, userName, categoryIdNum, listingId);
     this.listingService.addListing(this.listing);
 
   };

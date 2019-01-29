@@ -13,8 +13,7 @@ export class CategoryPipe implements PipeTransform {
   transform(input: Listing[], categoryId) {
     var output: Listing[] = [];
     for(var i = 0; i< input.length; i++) {
-      let categoryIdNumber: number = parseInt(input[i].categoryId)
-      if(categoryIdNumber === categoryId){
+      if(input[i].categoryId === categoryId){
         output.push(input[i]);
       }
     }
