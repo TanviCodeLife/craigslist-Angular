@@ -1,5 +1,5 @@
 <h2>Id: {{categoryId}}</h2>
 
-<div *ngFor="let listing of listings">
+<div *ngFor="let listing of listings | category:categoryId" (click)="goToListingPage(listing)">
   <p><em>{{ listing.title }}: {{ listing.id }}</em></p>
 </div>

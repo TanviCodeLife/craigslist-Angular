@@ -23,9 +23,13 @@ export class CategoryDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.categoryId = parseInt(urlParameters['id']);
     });
+
+    console.log(this.categoryId);
+    console.log(this.listings);
   }
 
   goToListingPage(clickedListing: Listing){
+    console.log(clickedListing)
     this.router.navigate(['listings', clickedListing.id])
   }
 
