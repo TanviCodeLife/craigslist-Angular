@@ -1,5 +1,5 @@
 <p>All Categories</p>
 
-<div *ngFor="let category of categories">
+<div *ngFor="let category of categories" (click)="goToCategoryPage(category)">
   <p><em>{{ category.id }}: {{ category.name }}</em></p>
 </div>

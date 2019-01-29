@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Category } from '../models/category.model.ts'
+import { Category } from '../models/category.model.ts';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category-list',
@@ -13,7 +14,10 @@ export class CategoryListComponent {
     new Category("Furniture", 3)
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  goToCategoryPage(clickedCategory: Category) {
+    this.router.navigate(['categories', clickedCategory.id])
+  }
 
 }
