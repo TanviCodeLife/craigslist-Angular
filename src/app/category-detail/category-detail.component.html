@@ -1,1 +1,5 @@
 <h2>Id: {{categoryId}}</h2>
+
+<div *ngFor="let listing of listings">
+  <p><em>{{ listing.title }}: {{ listing.id }}</em></p>
+</div>

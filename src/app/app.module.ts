@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { MainComponent } from './main/main.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { ListingDetailComponent } from './listing-detail/listing-detail.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
     AppComponent,
     CategoryListComponent,
     MainComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    ListingDetailComponent
   ],
   imports: [
     BrowserModule,
