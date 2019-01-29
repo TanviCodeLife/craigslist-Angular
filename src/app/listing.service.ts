@@ -11,6 +11,11 @@ export class ListingService {
     return LISTINGS;
   }
 
+  addListing(listing: Listing){
+    LISTINGS.push(listing);
+    
+  }
+
   getListingById(listingId: number){
     for(var i = 0; i <= LISTINGS.length - 1; i++){
       if(LISTINGS[i].id === listingId) {
