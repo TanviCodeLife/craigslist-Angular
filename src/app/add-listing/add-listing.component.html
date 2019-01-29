@@ -1,3 +1,17 @@
-<p>
-  add-listing works!
-</p>
+<div class="form">
+  <label>Title of Listing</label>
+  <input #newTitle>
+  <label>Content of Listing</label>
+  <input #newContent>
+  <label>Name of user posting the Listing</label>
+  <input #newUserName>
+  <label>Category for Listing</label>
+  <label>Task Priority:</label>
+  <select #newCategory>
+    <option [value]="1"> Housing </option>
+    <option [value]="2"> Jobs </option>
+    <option [value]="3"> Furniture </option>
+  </select>
+  <button (click)="submitForm(newTitle.value, newContent.value, newUserName.value, newCategory.value); newTitle.value= ''; newContent.value= ''; newUserName.value= ''; newCategory.value = '';">Add a Listing</button>
+
+</div>
