@@ -1,3 +1,5 @@
-<p>
-  category-list works!
-</p>
+<p>All Categories</p>
+
+<div *ngFor="let category of categories">
+  <p><em>{{ category.id }}: {{ category.name }}</em></p>
+</div>
